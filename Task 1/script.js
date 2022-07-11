@@ -9,6 +9,12 @@ Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
 
-function weightConverter(valNum) {
-  document.getElementById("output").innerHTML=valNum*2.2046;
-}
+document.getElementById('search').addEventListener('input', (event) => {
+
+  let kg = event.target.value;
+  let input = kg;
+
+  document.getElementById('Pounds').innerHTML = kg * 2.2046;
+  document.getElementById('Grams').innerHTML = kg * 1000;
+  document.getElementById('Ounces').innerHTML = kg * 35.274;
+}); 
